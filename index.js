@@ -15,8 +15,8 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, 'Bot aktif ✅');
 });
 
-cron.schedule('0 */2 * * *', () => {
-  bot.sendMessage(process.env.CHAT_ID, 'Selamat pagi ☀️');
+cron.schedule('55 */2 * * *', () => {
+  bot.sendMessage(process.env.CHAT_ID, 'Reminder ⏰');
 }, {
   timezone: 'Asia/Jakarta'
 });
