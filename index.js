@@ -9,6 +9,8 @@ const bot = new TelegramBot(process.env.BOT_TOKEN, {
     autoStart: true
   }
 });
+bot.deleteWebHook();
+
 bot.onText(/\/start/, (msg) => {
   bot.sendMessage(msg.chat.id, 'Bot aktif ✅');
 });
